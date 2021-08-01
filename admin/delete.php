@@ -2,6 +2,7 @@
 
 include '../includes/config.php';
 include '../includes/messagesClass.php';
+include '../templates/admin/header.php';
 
 try {
     $id = isset($_GET['id'])? (int)$_GET['id'] : 0;
@@ -13,3 +14,5 @@ try {
     echo 'Error deleting message ' . $e->getMessage();
     header("refresh:3;url=index.php");
 }
+
+include '../templates/admin/footer.php';

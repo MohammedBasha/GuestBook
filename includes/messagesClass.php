@@ -59,7 +59,7 @@ class messagesClass
     }
 
     public function searchMessages($keyword) {
-        return $this->getMessages("WHERE title LIKE '%$keyword%' OR message LIKE '%$keyword%'");
+        return $this->getMessages("WHERE title LIKE '%$keyword%' OR message LIKE '%$keyword%' ORDER BY id DESC");
     }
 
     public function getMessagesByStatus($published = 1) {
