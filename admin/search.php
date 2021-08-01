@@ -1,6 +1,10 @@
 <?php
 include '../includes/config.php';
 include '../includes/messagesClass.php';
+include '../includes/usersClass.php';
+
+if(!usersClass::check()) header('LOCATION: login.php');
+
 include '../templates/admin/header.php';
 $keyword = $_GET['search']? $_GET['search'] : '';
 ?>

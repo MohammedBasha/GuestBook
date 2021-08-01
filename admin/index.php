@@ -1,7 +1,10 @@
 <?php
-
+ob_start();
 include '../includes/config.php';
 include '../includes/messagesClass.php';
+include '../includes/usersClass.php';
+
+if(!usersClass::check()) header('LOCATION: login.php');
 
 $messages = new messagesClass();
 $allMessages = $messages->getMessages('ORDER BY id DESC');
@@ -101,4 +104,5 @@ include '../templates/admin/header.php';
 
 <?php
 include '../templates/admin/footer.php';
+ob_end_flush();
 ?>
