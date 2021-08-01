@@ -1,5 +1,5 @@
 <?php
-$keyword = $_GET['search']? $_GET['search'] : '';
+$keyword = isset($_GET['search'])? $_GET['search'] : '';
 ?>
 <!DOCTYPE html>
 <html lang="en">

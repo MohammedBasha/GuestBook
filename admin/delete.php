@@ -1,5 +1,5 @@
 <?php
-
+ob_start();
 include '../includes/config.php';
 include '../includes/messagesClass.php';
 include '../templates/admin/header.php';
@@ -16,3 +16,4 @@ try {
 }
 
 include '../templates/admin/footer.php';
+ob_end_flush();

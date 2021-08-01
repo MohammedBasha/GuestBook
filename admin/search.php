@@ -66,7 +66,7 @@ $keyword = $_GET['search']? $_GET['search'] : '';
                                                     <?php echo $message['date']; ?>
                                                 </td>
                                                 <td>
-                                                    <a href="updated.php?id=<?php echo $message['id']; ?>" title="Update Message" class="btn btn-block btn-warning">Update</a>
+                                                    <a href="update.php?id=<?php echo $message['id']; ?>" title="Update Message" class="btn btn-block btn-warning">Update</a>
                                                     <a href="delete.php?id=<?php echo $message['id']; ?>" title="Delete Message" class="btn btn-block btn-danger">Delete</a>
                                                 </td>
                                             </tr>
