@@ -83,13 +83,18 @@ class messagesClass
     }
 
     public function deleteMessage($id) {
-        try {
-            $query = $this->connection->prepare("DELETE FROM messages WHERE id = ?");
+        if ($this->getMessage($id)) {
+            try {
+                $query = $this->connection->prepare("DELETE FROM messages WHERE id = ?");
 
-            $query->execute([$id]);
-            return true;
-        } catch (PDOException $e) {
-            echo 'Error Deleting data, ' . $e->getMessage();
+                $query->execute([$id]);
+                return true;
+            } catch (PDOException $e) {
+                echo 'Error Deleting data, ' . $e->getMessage();
+            }
+        } else {
+            throw new Exception('This message not found');
         }
+
     }
 }

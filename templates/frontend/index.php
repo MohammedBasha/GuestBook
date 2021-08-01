@@ -62,8 +62,6 @@
             echo 'No messages.';
         }?>
             <div class="clearfix"></div>
-            <div class="message-success"><span>sucess!</span></div>
-            <div class="message-error"><span>error!</span></div>
             <form action="add.php" method="post">
                 <label for="name">name</label>
                 <input type="text" name="name" id="name"><br/>
